@@ -24,7 +24,6 @@ interface SecondaryNavProps {
 
 import { logout } from "@/app/actions/auth"
 
-// Turkish translations for page names
 const pageTranslations: { [key: string]: string } = {
     'dashboard': 'Dashboard',
 }
