@@ -24,7 +24,7 @@ export default function Sidebar() {
   return (
     <div className="flex flex-col h-screen w-48 lg:w-64 bg-background border-r hidden md:flex">
       <div className="p-6">
-        <h1 className="text-2xl font-semibold tracking-tight text-center">Puantaj Sistemi</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-center">Dashboard</h1>
       </div>
       <ScrollArea className="flex-1">
         <nav className="flex flex-col gap-2 p-4">
