@@ -14,7 +14,7 @@ A template for building web applications with Next.js, Lucia for authentication,
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nextjs-lucia-postgres-shadcn-template.git
+git clone https://github.com/AtaRekt/nextjs-lucia-postgres-shadcn-template.git
 cd nextjs-lucia-postgres-shadcn-template
 ```
 
