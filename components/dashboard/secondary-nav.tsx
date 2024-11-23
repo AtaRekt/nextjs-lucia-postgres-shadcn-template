@@ -12,7 +12,8 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { User, ExternalLink } from 'lucide-react'
+
+import { User } from 'lucide-react'
 
 interface SecondaryNavProps {
     user: {
@@ -23,6 +24,7 @@ interface SecondaryNavProps {
 }
 
 import { logout } from "@/app/actions/auth"
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const pageTranslations: { [key: string]: string } = {
     'dashboard': 'Dashboard',
@@ -61,6 +63,7 @@ export default function SecondaryNav({ user }: SecondaryNavProps) {
                 <div className="flex justify-between items-center py-2">
                     {getPageIndicator()}
                     <div className="flex items-center space-x-2">
+                        <ThemeToggle />
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="ghost" size="icon">

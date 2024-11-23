@@ -46,7 +46,7 @@ export default function LoginForm({ serverAction }: { serverAction: (formData: F
             email: "",
             password: ""
         },
-        mode: "onBlur",
+        mode: "all",
         criteriaMode: "all",
         reValidateMode: "onChange",
     });
@@ -82,20 +82,20 @@ export default function LoginForm({ serverAction }: { serverAction: (formData: F
                             <Label htmlFor="email">Email</Label>
                             <Input {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, })} placeholder="Enter email..." className={cn(`outline-none ${errors?.email ? 'border-red-500' : ''}`)} />
                             {errors.email?.type === "required" && (
-                                <Label className="text-red-500">Email is required.</Label>
+                                <Label className="text-red-500 text-xs font-normal">Email is required.</Label>
                             )}
                             {errors.email?.type === "pattern" && (
-                                <Label className="text-red-500">Please enter a valid email.</Label>
+                                <Label className="text-red-500 text-xs font-normal">Please enter a valid email.</Label>
                             )}
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="password">Password</Label>
                             <Input {...register("password", { required: true, minLength: 6 })} type="password" placeholder="Enter password..." className={cn(`outline-none ${errors?.password ? 'border-red-500' : ''}`)} />
                             {errors.password?.type === "required" && (
-                                <Label className="text-red-500">Password is required.</Label>
+                                <Label className="text-red-500 text-xs font-normal">Password is required.</Label>
                             )}
                             {errors.password?.type === "minLength" && (
-                                <Label className="text-red-500">Password must be at least 6 characters.</Label>
+                                <Label className="text-red-500 text-xs font-normal">Password must be at least 6 characters.</Label>
                             )}
                         </div>
                     </CardContent>

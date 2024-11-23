@@ -9,7 +9,7 @@ export const metadata = {
 export default async function Page() {
 	return (
 		<>
-			<div className="flex items-center justify-center bg-black h-[100vh] text-white">
+			<div className="flex items-center justify-center dark:bg-black h-[100vh] text-white">
 				<LoginForm serverAction={login} />
 			</div>
 		</>

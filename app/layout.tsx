@@ -1,5 +1,6 @@
 import NextTopLoader from 'nextjs-toploader';
 import { Poppins } from "next/font/google";
+import { Providers } from "@/components/providers";
 import "./globals.css";
 
 
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body
-        className={`${poppinsVariable.className} antialiased dark`}
+        className={`${poppinsVariable.className} antialiased`}
       >
         <NextTopLoader
           color="#ffffff"
@@ -30,7 +31,9 @@ export default function RootLayout({
           speed={200}
           zIndex={1600}
         />
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
